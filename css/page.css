@@ -144,8 +144,8 @@ header div{text-align: right;}
 .technologyContainer ul>li div a{font-size: 16px; font-weight: 400; line-height: 60px; color: #FFF; display: inline-block; position: relative; padding-right: 80px;}
 .technologyContainer ul>li div a::after{content: ''; display: block; width: 60px; height: 60px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 30px; position: absolute; right: 0; top: 0; background: url('../images/pit_icon_viewMore.svg') center no-repeat;}
 
-.technologyContainer .swiper-pagination span:not(:first-of-type){padding-left: 12px;}
-.technologyContainer .swiper-pagination span:not(:first-of-type)::before{content: '·'; position: absolute; width: 10px; height: 10px; left: 0;}
+/* .technologyContainer .swiper-pagination span:not(:first-of-type){padding-left: 12px;} */
+/* .technologyContainer .swiper-pagination span:not(:first-of-type)::before{content: '·'; position: absolute; width: 10px; height: 10px; left: 0;} */
 .technologyContainer .swiper-pagination-bullet{width: auto; height: auto;}
 .technologyContainer .swiper-pagination-bullet.swiper-pagination-bullet-active{text-decoration: underline; color: #FFF;}
 
@@ -229,7 +229,7 @@ header div{text-align: right;}
 .aboutContainer ul{display: flex; width: 100%; flex-wrap: wrap; gap: 40px 0; justify-content: center;}
 .aboutContainer ul li{display: flex; flex-direction: column; align-items: center; width: 50%; max-width: 200px;}
 .aboutContainer ul li img{margin-bottom: 16px;}
-.aboutContainer ul li b{font-size: 24px; font-weight: 700; line-height: 36px; color: #282C34; margin-bottom: 8px;}
+.aboutContainer ul li b{font-size: 24px; font-weight: 700; line-height: 36px; color: #282C34; margin-bottom: 8px; text-align: center;}
 .aboutContainer ul li span{font-size: 14px; font-weight: 400; line-height: 20px; color: #6B7280;}
 
 .newsContainer{padding-bottom: 0; position: relative;}
@@ -340,6 +340,9 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .technologyContainer ul>li div h3{font-size: 80px; line-height: 90px; width: 800px;}
     .technologyContainer ol.hashTagList{font-size: 24px;}
     .technologyContainer ul>li div p{font-size: 18px; width: 800px;}
+    
+    .technologyContainer .swiper-pagination span:not(:first-of-type){padding-left: 12px;}
+    .technologyContainer .swiper-pagination span:not(:first-of-type)::before{content: '·'; position: absolute; width: 10px; height: 10px; left: 0;}
 
     .technologySlide{padding-bottom: 60px;}
     
@@ -454,7 +457,7 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .technologyContainer{padding-inline: 4%; box-sizing: border-box;}
     .technologyContainer h2{font-size: 20px;}
     .technologyContainer .swiper-pagination{width: 100%; text-align: left; height: 60px; top: 0;}
-    .technologyContainer .swiper-pagination span{font-size: 16px; font-weight: 600; line-height: 120%; color: #73757E; background-color: transparent; display: inline-block; opacity: 1; position: relative;}
+    .technologyContainer .swiper-pagination span{font-size: 14px; font-weight: 600; line-height: 150%; color: #73757E; background-color: transparent; display: inline-block; opacity: 1; position: relative;}
 
     .technologyContainer .circleCTA{right: 6%; top: 240px;}
     .circleCTA{
