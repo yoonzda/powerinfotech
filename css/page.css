@@ -502,7 +502,7 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .bannerList{margin-bottom: 8px;}
     .bannerList .swiper-wrapper{gap: 20px;}
 
-    .aboutContainer{padding-inline: 4%; box-sizing: border-box;}
+    .aboutContainer{padding: 0 4%; box-sizing: border-box;}
     .aboutContainer h2{font-size: 27px; padding-bottom: 8px;}
     .aboutContainer h2::after{width: 48px; left: calc(50% - 24px);}
     .aboutContainer p{font-size: 14px; line-height: 24px; width: 80%;}
