@@ -144,8 +144,6 @@ header div{text-align: right;}
 .technologyContainer ul>li div a{font-size: 16px; font-weight: 400; line-height: 60px; color: #FFF; display: inline-block; position: relative; padding-right: 80px;}
 .technologyContainer ul>li div a::after{content: ''; display: block; width: 60px; height: 60px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 30px; position: absolute; right: 0; top: 0; background: url('../images/pit_icon_viewMore.svg') center no-repeat;}
 
-/* .technologyContainer .swiper-pagination span:not(:first-of-type){padding-left: 12px;} */
-/* .technologyContainer .swiper-pagination span:not(:first-of-type)::before{content: '·'; position: absolute; width: 10px; height: 10px; left: 0;} */
 .technologyContainer .swiper-pagination-bullet{width: auto; height: auto;}
 .technologyContainer .swiper-pagination-bullet.swiper-pagination-bullet-active{text-decoration: underline; color: #FFF;}
 
@@ -158,7 +156,6 @@ header div{text-align: right;}
 .keywordContainer div.leftBox{background-color: #090745;}
 .keywordContainer div.rightBox{background-color: #EFF0F6;}
 
-.keywordContainer div.leftBox{padding-inline: 4%; box-sizing: border-box;}
 .keywordContainer div.leftBox h3{font-weight: 700; line-height: 130%; color: #FFF; text-align: center;}
 .keywordContainer div.leftBox p{font-weight: 500; line-height: 170%; color: #A0A6B4; letter-spacing: -1px; text-align: center; word-break: keep-all;}
 .keywordContainer div.leftBox p mark{color: #FFF; display: block;}
@@ -318,7 +315,6 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .videoContainer .conText p{font-size: 18px; line-height: 28px;}
 
     .businessContainer h2{width: 630px; font-size: 39px;}
-    /* .businessContainer ul>li{width: 1000px;} */
     .businessContainer ul li .textBox h3{width: 40%; font-size: 33px;}
     .businessContainer ul li .textBox div{width: 60%;}
     .businessContainer ul li .textBox div p{font-size: 22px;}
@@ -346,6 +342,7 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
 
     .technologySlide{padding-bottom: 60px;}
     
+    .keywordContainer div.leftBox{padding-inline: 4%; box-sizing: border-box;}
     .keywordContainer div.leftBox{padding-block: 150px;}
     .keywordContainer div.leftBox h3{font-size: 46px;}
     .keywordContainer div.leftBox p{font-size: 20px;}
@@ -481,14 +478,15 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
         flex-direction: column;
     }
     .keywordContainer div.leftBox{padding-block: 60px;}
-    .keywordContainer div.leftBox h3{font-size: 24px;}
-    .keywordContainer div.leftBox p{font-size: 14px; word-break: keep-all;}
+    .keywordContainer div.leftBox h3{font-size: 24px; padding-inline: 4%;}
+    .keywordContainer div.leftBox p{font-size: 14px; word-break: keep-all; padding-inline: 4%;}
     .keywordContainer div.leftBox p mark b{display: inline-block;}
     .keywordContainer div.leftBox ol{
-        /* gap: 12px 6px; */
         display: block;
         white-space: nowrap;
         overflow: scroll;
+
+        padding-inline: 4%;
     }
     .keywordContainer div.leftBox ol::-webkit-scrollbar {
        display: none;
