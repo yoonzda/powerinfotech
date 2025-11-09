@@ -514,7 +514,7 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
 
     .track p{font-size: 80px;}
 
-    .contactContainer{padding-inline: 4%; box-sizing: border-box;}
+    .contactContainer div{padding-inline: 4%; box-sizing: border-box;}
     .contactContainer div h2{font-size: 27px; line-height: 150%; word-break: keep-all;}
     .contactContainer div p{font-size: 16px;}
     .contactContainer div a{font-size: 16px; background-position: 96px center;}
