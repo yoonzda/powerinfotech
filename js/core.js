@@ -107,3 +107,10 @@ for(const menu of menuList) {
         menuPanel.classList.toggle('active');
     })
 }
+
+window.addEventListener('pointermove', function(event){
+    document.querySelector('.cursorCircle').animate({
+        left: `${event.clientX}px`,
+        top: `${event.clientY + window.scrollY}px`
+    },{duration: 600, fill: 'forwards'})
+})
