@@ -3,13 +3,14 @@ const nextButton = document.getElementById("nextBtn");
 
 const titleTag = document.getElementById("titleTag");
 const contentTag = document.getElementById("contentTag");
+const imageTag = document.getElementById("imageTag");
 
 const titleData = [
     '프로젝트 허브',
-    'AIOps Monitor',
+    'AI 운영 Monitor',
     '스마트 스케쥴러',
-    'AI 결제 플로우',
-    '인스턴트 폼 빌더',
+    'AI 결재 플로우',
+    '템플릿 마스터',
     '인사이트 대시보드',
     '협업 피드',
     '예산 시뮬레이터',
@@ -17,14 +18,14 @@ const titleData = [
     '스마트 계약허브',
     '품질 트래커',
     'API 커넥트',
-    '권한 콘트롤+',
-    'ProcureFlow',
+    '권한 컨트롤+',
+    '구매 Flow',
     'DataMap Designer',
     'Adaptive UX Studio',
 ];
 const contentData = [
     '프로젝트 일정·성과를 한눈에 관리',
-    '장애 예측 및 자동 대응 시스템',
+    'AI기반 미래 장애 예측 및 자동 대응 시스템',
     '자동 일정 조정 및 WBS 기반 계획',
     '결재선 자동 추천, 즉시 승인',
     '반복문서를 빠르게 생성·편집',
@@ -82,6 +83,7 @@ for(const keyword of keywordList){
 function slideAction(){
     titleTag.innerText = titleData[currentNum];
     contentTag.innerText = contentData[currentNum];
+    imageTag.src = "images/pit_slide03_04.png";
 
     keywordActive.classList.remove('active');
     keywordList[currentNum].classList.add('active');
