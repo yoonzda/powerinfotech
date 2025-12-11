@@ -130,8 +130,8 @@ header div{text-align: right;}
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    padding-top: 40px;
 
     transition: opacity ease-out .4s;
 }
@@ -229,35 +229,48 @@ header div{text-align: right;}
 .aboutContainer ul li b{font-size: 24px; font-weight: 700; line-height: 36px; color: #282C34; margin-bottom: 8px; text-align: center;}
 .aboutContainer ul li span{font-size: 14px; font-weight: 400; line-height: 20px; color: #6B7280;}
 
+.creativeContainer h2{
+    font-weight: 700;
+    line-height: 120%;
+    color: #111111;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.creativeContainer .swiper-wrapper{transition-timing-function: linear;}
+
 .newsContainer{padding-bottom: 0; position: relative;}
 .newsContainer h2{font-weight: 700; line-height: 120%; color: #111111; letter-spacing: -1px; text-align: center;}
 .newsContainer ul li{display: inline-block;}
 .newsContainer ul li img{width: 100%; display: block;}
 
-
+body{overflow-x: hidden;}
 .cursorCircle{
     opacity: 0;
-
     position: absolute;
-    width: 0px;
-    height: 0px;
-    display: none;
-
+    width: 20px;
+    height: 20px;
     background-color: rgba(211, 17, 69, 0.6);
+    backdrop-filter: blur(15px);
     border-radius: 50%;
     z-index: 9999;
     transition: all 0.3s;
-    
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.cursorCircle span {
+    font-weight: 500;
+    line-height: 120%;
+    color: #FFF;
+    letter-spacing: -1px;
 }
 .newsContainer:hover ~ .cursorCircle,
 .technologyContainer:hover ~ .cursorCircle{
     opacity: 1;
     visibility: visible;
+    width: 140px;
+    height: 140px;
 }
-
 
 .circleCTA{
     border-radius: 50%;
@@ -272,7 +285,6 @@ header div{text-align: right;}
     z-index: 10;
 }
 .circleCTA span{font-weight: 500; line-height: 120%; color: #FFF; letter-spacing: -1px;}
-
 
 @keyframes scroll-animation{
     0%{left: 0;}
@@ -388,6 +400,30 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .aboutContainer h2{font-size: 48px; padding-bottom: 16px;}
     .aboutContainer h2::after{width: 80px; left: calc(50% - 40px);}
     .aboutContainer p{font-size: 19px; line-height: 28px; width: 80%;}
+
+    
+    .creativeContainer h2{font-size: 48px;}
+    .creativeContainer .creativeSlide li{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 280px;
+    }
+    .creativeContainer .creativeSlide li:nth-of-type(2n+1){
+        padding-top: 60px;
+    }
+    .creativeContainer .creativeSlide li img{
+        width: 100%;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    }
+    .creativeContainer .creativeSlide li span{
+        background-color: #AAACB1;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 140%;
+        color: #FFF;
+        padding: 4px 10px;
+    }
 
     .newsContainer .circleCTA{left: calc(50% + 240px); bottom: 40px;}
 

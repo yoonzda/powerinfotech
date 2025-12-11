@@ -81,9 +81,15 @@ for(const keyword of keywordList){
 }
 
 function slideAction(){
+    var imageNum = Number(currentNum) + 1;
+    if (imageNum < 10) {
+        imageNum = '0' + imageNum;
+    }
+    var imageUrl = "images/pit_slide03_" + imageNum + ".png"
+
     titleTag.innerText = titleData[currentNum];
     contentTag.innerText = contentData[currentNum];
-    imageTag.src = "images/pit_slide03_04.png";
+    imageTag.src = imageUrl;
 
     keywordActive.classList.remove('active');
     keywordList[currentNum].classList.add('active');
@@ -112,7 +118,7 @@ for(const menu of menuList) {
 
 window.addEventListener('pointermove', function(event){
     document.querySelector('.cursorCircle').animate({
-        left: `${event.clientX}px`,
-        top: `${event.clientY + window.scrollY}px`
+        left: `${event.clientX + 20}px`,
+        top: `${event.clientY + window.scrollY + 20}px`
     },{duration: 600, fill: 'forwards'})
 })

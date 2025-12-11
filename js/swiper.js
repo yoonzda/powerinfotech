@@ -27,6 +27,19 @@ var swiper1 = new Swiper(".businessSlide", {
 //     },
 // });
 
+var swiper4 = new Swiper(".creativeSlide", {
+    spaceBetween: 4,
+    centeredSlides: true,
+    speed: 4000,
+    autoplay: {
+        delay: 1,
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+    disableOnInteraction: false,
+});
+
 var tecArr = ['PowerAX', 'PowerBOS', 'PowerPOB', 'PowerITSM', 'PowerUX'];
 
 var swiper3 = new Swiper(".technologySlide", {
