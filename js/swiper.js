@@ -3,6 +3,7 @@ var swiper1 = new Swiper(".businessSlide", {
     centeredSlides: true,
     spaceBetween: 30,
     speed: 800,
+    loop: true,
     pagination: {
     el: ".swiper-pagination",
     // type: "fraction",
@@ -31,6 +32,19 @@ var swiper4 = new Swiper(".creativeSlide", {
     spaceBetween: 4,
     centeredSlides: true,
     speed: 4000,
+    autoplay: {
+        delay: 1,
+    },
+    loop: true,
+    slidesPerView: 'auto',
+    allowTouchMove: false,
+    disableOnInteraction: false,
+});
+
+var swiper5 = new Swiper(".bannerList", {
+    spaceBetween: 70,
+    centeredSlides: true,
+    speed: 6000,
     autoplay: {
         delay: 1,
     },

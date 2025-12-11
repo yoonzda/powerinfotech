@@ -59,26 +59,26 @@ wave.innerHTML = wave.textContent
 
 
 
-let rollingSwiper; // Swiper 슬라이드
+// let rollingSwiper; // Swiper 슬라이드
 
-// 롤링시작 함수
-function PlayRollingSwiper(target){
-  rollingSwiper = new Swiper('.bannerList', {
-    spaceBetween: 0,
-    centeredSlides: true,
-    speed: 5000,
-    autoplay: {
-      delay: 1,
-    },
-    loop: true,
-    slidesPerView: 'auto',
-    allowTouchMove: false,
-    disableOnInteraction: false,
-    // loopAdditionalSlides : 10,
-  });
-}
+// // 롤링시작 함수
+// function PlayRollingSwiper(target){
+//   rollingSwiper = new Swiper('.bannerList', {
+//     spaceBetween: 0,
+//     centeredSlides: true,
+//     speed: 5000,
+//     autoplay: {
+//       delay: 1,
+//     },
+//     loop: true,
+//     slidesPerView: 'auto',
+//     allowTouchMove: false,
+//     disableOnInteraction: false,
+//     // loopAdditionalSlides : 10,
+//   });
+// }
 
-// 페이지 로드
-window.addEventListener('load', function(){
-  PlayRollingSwiper();
-});
+// // 페이지 로드
+// window.addEventListener('load', function(){
+//   PlayRollingSwiper();
+// });
