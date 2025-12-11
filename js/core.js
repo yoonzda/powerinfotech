@@ -42,7 +42,7 @@ const contentData = [
     '반응형·AI 추천형 인터페이스 생성',
 ];
 
-var currentNum = 4;
+var currentNum = 0;
 // var keywordList = document.querySelectorAll(".keywordList li ul li");
 // var keywordActive = document.querySelector(".keywordList li ul li.active");
 var keywordList = document.querySelectorAll(".keywordList li");
