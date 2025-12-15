@@ -116,9 +116,82 @@ for(const menu of menuList) {
     })
 }
 
-window.addEventListener('pointermove', function(event){
-    document.querySelector('.cursorCircle').animate({
-        left: `${event.clientX + 20}px`,
-        top: `${event.clientY + window.scrollY + 20}px`
-    },{duration: 600, fill: 'forwards'})
-})
+const cursor = document.querySelector('.cursorCircle');
+
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+if (window.matchMedia('(pointer: fine)').matches) {
+
+  window.addEventListener('pointermove', (e) => {
+    mouseX = e.clientX + 20;
+    mouseY = e.clientY + 20;
+  });
+
+  function animateCursor() {
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+
+    cursor.style.transform =
+      `translate3d(${currentX}px, ${currentY}px, 0)`;
+
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+
+  ['.newsContainer', '.technologyContainer'].forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      el.addEventListener('pointerenter', () => {
+        cursor.classList.add('active');
+      });
+      el.addEventListener('pointerleave', () => {
+        cursor.classList.remove('active');
+      });
+    });
+  });
+}
+
+
+
+// window.addEventListener('pointermove', function(event){
+//     document.querySelector('.cursorCircle').animate({
+//         left: `${event.clientX + 20}px`,
+//         top: `${event.clientY + window.scrollY + 20}px`
+//     },{duration: 600, fill: 'forwards'})
+// // })
+
+// const cursor = document.querySelector('.cursorCircle');
+
+// let mouseX = 0, mouseY = 0;
+// let currentX = 0, currentY = 0;
+
+// window.addEventListener('pointermove', (e) => {
+//   mouseX = e.clientX + 20;
+//   mouseY = e.clientY + 20;
+// });
+
+// function animateCursor() {
+//   currentX += (mouseX - currentX) * 0.15;
+//   currentY += (mouseY - currentY) * 0.15;
+
+//   cursor.style.transform =
+//     `translate3d(${currentX}px, ${currentY}px, 0)`;
+
+//   requestAnimationFrame(animateCursor);
+// }
+
+// animateCursor();
+// // const cursor = document.querySelector('.cursorCircle');
+
+// ['.newsContainer', '.technologyContainer'].forEach(selector => {
+//   document.querySelectorAll(selector).forEach(el => {
+//     el.addEventListener('mouseenter', () => {
+//       cursor.classList.add('active');
+//     });
+
+//     el.addEventListener('mouseleave', () => {
+//       cursor.classList.remove('active');
+//     });
+//   });
+// });
