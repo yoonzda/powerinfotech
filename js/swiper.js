@@ -43,7 +43,7 @@ var swiper4 = new Swiper(".creativeSlide", {
 
 var swiper5 = new Swiper(".bannerList", {
   slidesPerView: 'auto',
-  spaceBetween: 24,          // 모바일에서 70은 너무 큼
+  spaceBetween: 40,
   loop: true,
   speed: 6000,
   allowTouchMove: false,
@@ -51,7 +51,7 @@ var swiper5 = new Swiper(".bannerList", {
     delay: 0,
     disableOnInteraction: false
   },
-  centeredSlides: false,     // ❗ 제거
+  centeredSlides: false,
   watchOverflow: true,
 });
 
