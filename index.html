@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/import.css">
 </head>
 <body>
-    <header class="pb44 pi50">
+    <header class="pb44 pi50" id="header">
         <h1>
             <a href="#home">
                 <img src="images/pit_logo.svg" alt="welcome to powerinfotech">
@@ -403,27 +403,27 @@
             <div class="swiper newsSlide">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <img src="images/pit_slide04_01.png" alt="news image">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <img src="images/pit_slide04_02.png" alt="news image">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <img src="images/pit_slide04_03.png" alt="news image">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <img src="images/pit_slide04_04.png" alt="news image">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <img src="images/pit_slide04_05.png" alt="news image">
                         </a>
                     </li>
@@ -460,27 +460,9 @@
                 </ul>
             </div>
         </footer>
-
     </div>
     <div class="fpo cursorCircle">
         <span>&#60; Drag &#62;</span>
     </div>
 </body>
-<script>
-  const Scrollbar = window.Scrollbar;
-
-  Scrollbar.use(OverscrollPlugin);
-
-  Scrollbar.init(document.querySelector('#my-scrollbar'), {
-  damping: 0.06,
-  renderByPixels: true,
-  plugins: {
-    overscroll: {
-      effect: 'bounce',
-      damping: 0.15,
-      maxOverscroll: 70
-    }
-  }
-  });
-</script>
 </html>

@@ -152,46 +152,46 @@ if (window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
+const Scrollbar = window.Scrollbar;
+Scrollbar.use(OverscrollPlugin);
 
+const scrollbar = Scrollbar.init(
+  document.querySelector('#my-scrollbar'),
+  {
+    damping: 0.06,
+    renderByPixels: true,
+    plugins: {
+      overscroll: {
+        effect: 'bounce',
+        damping: 0.1,
+        maxOverscroll: 40
+      }
+    }
+  }
+);
 
-// window.addEventListener('pointermove', function(event){
-//     document.querySelector('.cursorCircle').animate({
-//         left: `${event.clientX + 20}px`,
-//         top: `${event.clientY + window.scrollY + 20}px`
-//     },{duration: 600, fill: 'forwards'})
-// // })
+const header = document.querySelector("#header");
 
-// const cursor = document.querySelector('.cursorCircle');
+scrollbar.addListener(({ offset }) => {
+  if (offset.y > 0) {
+    header.classList.add("on");
+  } else {
+    header.classList.remove("on");
+  }
+});
 
-// let mouseX = 0, mouseY = 0;
-// let currentX = 0, currentY = 0;
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-// window.addEventListener('pointermove', (e) => {
-//   mouseX = e.clientX + 20;
-//   mouseY = e.clientY + 20;
-// });
+    const targetId = this.getAttribute('href');
+    const targetEl = document.querySelector(targetId);
 
-// function animateCursor() {
-//   currentX += (mouseX - currentX) * 0.15;
-//   currentY += (mouseY - currentY) * 0.15;
+    if (!targetEl) return;
 
-//   cursor.style.transform =
-//     `translate3d(${currentX}px, ${currentY}px, 0)`;
-
-//   requestAnimationFrame(animateCursor);
-// }
-
-// animateCursor();
-// // const cursor = document.querySelector('.cursorCircle');
-
-// ['.newsContainer', '.technologyContainer'].forEach(selector => {
-//   document.querySelectorAll(selector).forEach(el => {
-//     el.addEventListener('mouseenter', () => {
-//       cursor.classList.add('active');
-//     });
-
-//     el.addEventListener('mouseleave', () => {
-//       cursor.classList.remove('active');
-//     });
-//   });
-// });
+    scrollbar.scrollIntoView(targetEl, {
+      offsetTop: 0,
+      damping: 0.1
+    });
+  });
+});
