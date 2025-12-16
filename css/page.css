@@ -568,7 +568,10 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .keywordContainer div.leftBox ol{
         display: block;
         white-space: nowrap;
-        overflow: scroll;
+        /* overflow: scroll; */
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch; /* iOS 필수 */
 
         padding-inline: 4%;
     }
