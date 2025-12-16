@@ -43,7 +43,7 @@ var swiper4 = new Swiper(".creativeSlide", {
 
 var swiper5 = new Swiper(".bannerList", {
     spaceBetween: 70,
-    centeredSlides: true,
+    // centeredSlides: true,
     speed: 6000,
     autoplay: {
         delay: 1,

@@ -237,7 +237,17 @@ header div{text-align: right;}
 .creativeContainer .swiper-wrapper{transition-timing-function: linear;}
 .bannerList .swiper-wrapper{transition-timing-function: linear;}
 
+.bannerList {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannerList .swiper-wrapper {
+  box-sizing: border-box;
+}
+
 .bannerList .swiper-slide {
+  width: auto;
   flex-shrink: 0;
 }
 
