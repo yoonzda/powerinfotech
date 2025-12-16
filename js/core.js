@@ -152,14 +152,17 @@ if (window.matchMedia('(pointer: fine)').matches) {
   });
 }
 
-const Scrollbar = window.Scrollbar;
-Scrollbar.use(OverscrollPlugin);
+const isMobile = window.matchMedia('(pointer: coarse)').matches;
 
-const scrollbar = Scrollbar.init(
+let scrollbar = null;
+
+if (!isMobile) {
+  scrollbar = Scrollbar.init(
   document.querySelector('#my-scrollbar'),
   {
     damping: 0.06,
     renderByPixels: true,
+    continuousScrolling: false,
     plugins: {
       overscroll: {
         effect: 'bounce',
@@ -169,6 +172,26 @@ const scrollbar = Scrollbar.init(
     }
   }
 );
+}
+
+const Scrollbar = window.Scrollbar;
+Scrollbar.use(OverscrollPlugin);
+
+// const scrollbar = Scrollbar.init(
+//   document.querySelector('#my-scrollbar'),
+//   {
+//     damping: 0.06,
+//     renderByPixels: true,
+//     continuousScrolling: false,
+//     plugins: {
+//       overscroll: {
+//         effect: 'bounce',
+//         damping: 0.1,
+//         maxOverscroll: 40
+//       }
+//     }
+//   }
+// );
 
 const header = document.querySelector("#header");
 
@@ -195,3 +218,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+document.addEventListener('touchmove', (e) => {
+  const horizontalScrollEl = e.target.closest(
+    '.keywordContainer div.leftBox ol'
+  );
+
+  if (horizontalScrollEl) {
+    return; // 가로 스크롤 영역은 완전 통과
+  }
+
+  e.preventDefault();
+}, { passive: false });
