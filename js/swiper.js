@@ -42,17 +42,31 @@ var swiper4 = new Swiper(".creativeSlide", {
 });
 
 var swiper5 = new Swiper(".bannerList", {
-    spaceBetween: 70,
-    // centeredSlides: true,
-    speed: 6000,
-    autoplay: {
-        delay: 1,
-    },
-    loop: true,
-    slidesPerView: 'auto',
-    allowTouchMove: false,
-    disableOnInteraction: false,
+  slidesPerView: 'auto',
+  spaceBetween: 24,          // 모바일에서 70은 너무 큼
+  loop: true,
+  speed: 6000,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false
+  },
+  centeredSlides: false,     // ❗ 제거
+  watchOverflow: true,
 });
+
+// var swiper5 = new Swiper(".bannerList", {
+//     spaceBetween: 70,
+//     // centeredSlides: true,
+//     speed: 6000,
+//     autoplay: {
+//         delay: 1,
+//     },
+//     loop: true,
+//     slidesPerView: 'auto',
+//     allowTouchMove: false,
+//     disableOnInteraction: false,
+// });
 
 var tecArr = ['PowerAX', 'PowerBOS', 'PowerPOB', 'PowerITSM', 'PowerUX'];
 
