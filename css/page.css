@@ -471,6 +471,11 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     header nav,header div:not(.mui){display: none;}
     .cursorCircle{display: none;}
 
+    
+    header{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
     header{justify-content: space-between;}
     header button.mui{
         background-color: transparent;
