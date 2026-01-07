@@ -201,3 +201,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+document.getElementById("mailBtn").addEventListener("click",function () {
+window.parent.postMessage(
+    {
+type:"MAILTO",
+email:"yaebin5@naver.com"
+    },
+"*"
+  );
+});
